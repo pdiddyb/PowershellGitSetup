@@ -1,0 +1,26 @@
+install node.js
+install github for windows
+install cntlm proxy
+Edit cntlm.ini at C:\Program Files (x86)\Cntlm
+Change the username to your acid
+change the domain to your domain
+Comment out the password using #
+change the proxy to the corporate proxy
+open admin command prompt
+cd into the cntlm directory c:\progam files (x86)\cntlm
+run this cntlm.exe -H -c cntlm.ini
+enter your password
+then copy all three lines it gives you into the cntlm.ini file under the password you commented earlier
+
+example:
+
+Username	ab12345
+Domain		XXX
+PassLM          F7474233E7A892834792745844839AD8
+PassNT          52B4D04A81234FDDE3211134E2903D05
+PassNTLMv2      B71EF7BE83112374637264A08372D95E
+
+add the proxy to your npm by opening a command prompt and typing:
+npm config set proxy http://localhost:3128
+npm config set https-proxy http://localhost:3128
+
