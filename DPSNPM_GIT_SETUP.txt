@@ -1,16 +1,16 @@
 install node.js
 install github for windows
 
-Opena  powershell prompt
+Open a  powershell prompt
 cd to this folder
 run ./setup.ps1
 
-This sets powershell to open ot the D drive.  
-If you want it to go to another drive then type
-notepad $profile
-This will open you profile in notepad and 
-you can edit the d: to c: or whatever you want to open to in the line:
+There is one thing you ned to change in your new profile:
+just type notpad $profile
+Then change 
 Set-Location d:\
+to open to whatever location you would like
+
 
 If you need to use a proxy then use this but usually you do not need a proxy 
 install cntlm proxy included in this folder.
