@@ -15,7 +15,22 @@ Then change
 Set-Location d:\
 to open to whatever location you would like
 
-If you need to use an authenticating  proxy then use this but usually you do not need a proxy 
+If you have trouble pulling git repos, you can set the git proxy:
+git config --global http.proxy http://companyProxy:80
+git config --global https.proxy http://companyProxy:80
+
+You can set up npm to use a proxy too:
+npm config set proxy http://companyProxy:80
+npm config set https-proxy http://companyProxy:80
+
+If you need a proxy for bower to work you will need to add this to your .bowerrc file in C:\Users\{Username}\.bowerrc :
+{
+    "proxy":"http:///companyProxy:80",
+    "https-proxy":"http:///companyProxy:80"
+}
+
+If the above proxy config does not work then you will want to use a local proxy with authentication:
+
 install cntlm proxy included in this folder.
 Edit cntlm.ini at C:\Program Files (x86)\Cntlm
 Change the username to your acid
@@ -39,10 +54,16 @@ PassNTLMv2      B71EF7BE83112374637264A08372D95E
 add the proxy to your npm by opening a command prompt and typing:
 npm config set proxy http://localhost:3128
 npm config set https-proxy http://localhost:3128
+git config --global http.proxy http://localhost:3128
+git config --global https.proxy http://localhost:3128
 
 If you need a proxy for bower to work you will need to add this to your .bowerrc file in C:\Users\{Username}\.bowerrc :
 {
     "proxy":"http://localhost:3128",
     "https-proxy":"http://localhost:3128"
 }
+
+
+REMEMBER TO UPDATE YOUR CNTML.INI FILE WHEN YOU CHANGE YOUR PASSWORD.
+
 
