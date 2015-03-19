@@ -1,8 +1,12 @@
-install node.js
-install github for windows
+install node.js https://nodejs.org/download/
+install github for windows https://windows.github.com/
 
-Open a  powershell prompt
-cd to this folder
+Clone this repo by opening a git shell and navigating to a folder you want to install at and then type
+git clone https://github.com/pdiddyb/PowershellGitSetup.git
+
+After cloning:
+Open a regular powershell prompt as admin
+cd to the clone folder
 run ./setup.ps1
 
 There is one thing you ned to change in your new profile:
@@ -11,8 +15,7 @@ Then change
 Set-Location d:\
 to open to whatever location you would like
 
-
-If you need to use a proxy then use this but usually you do not need a proxy 
+If you need to use an authenticating  proxy then use this but usually you do not need a proxy 
 install cntlm proxy included in this folder.
 Edit cntlm.ini at C:\Program Files (x86)\Cntlm
 Change the username to your acid
@@ -36,4 +39,10 @@ PassNTLMv2      B71EF7BE83112374637264A08372D95E
 add the proxy to your npm by opening a command prompt and typing:
 npm config set proxy http://localhost:3128
 npm config set https-proxy http://localhost:3128
+
+If you need a proxy for bower to work you will need to add this to your .bowerrc file in C:\Users\{Username}\.bowerrc :
+{
+    "proxy":"http://localhost:3128",
+    "https-proxy":"http://localhost:3128"
+}
 
